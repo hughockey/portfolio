@@ -1,42 +1,48 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* -------------------- Header ------------------------ */
+.header-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header-container__title {
+  color: white;
+  text-transform: uppercase;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-container__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-basis: 40%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* -------------------- Content ------------------------ */
+
+section > h1 {
+  font-size: 6.45em;
+  text-transform: uppercase;
 }
 
-.card {
-  padding: 2em;
+.description-container {
+  display: flex;
+  min-height: 200px;
 }
 
-.read-the-docs {
-  color: #888;
+.description-container > div {
+  padding: 10px;
+  flex-basis: 50%;
+  margin: 0;
+  background-color: gray;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
+  border-radius: 0px 50px;
+  /* background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0,
+    linear-gradient(63deg, transparent 74%, #999 78%),
+    linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%),
+    #444;
+  background-size: 16px 48px; */
+}
+
+.description-container > q {
+  padding-left: 25px;
+  flex-basis: 50%;
 }
