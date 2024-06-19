@@ -1,0 +1,69 @@
+[
+  
+    {
+      "nom": "Alfred technologies",
+      "logo": "./alfred_logo.svg",
+      "role": "Développeur frontend",
+      "dateDebut": "08/2022",
+      "dateFin": "04/2024",
+      "responsabilites": [
+        "Programmer de nouvelles fonctionnalités dans divers produits avec Vuejs",
+        "Corrections de bugs et mises à jour des technologies",
+        "Assurance qualité des tâches des autres développeurs",
+        "Preuves de concept sur de nouveaux outils frontend",
+        "Faire des modifications au pipeline Gitlab lorsque requis"
+      ]
+    },
+    {
+      "nom": "Conception webmedia",
+      "logo": "./cwm_logo.png",
+      "role": "Développeur frontend",
+      "dateDebut": "05/2021",
+      "dateFin": "08/2022",
+      "responsabilites": [
+        "Conception et développement des interfaces avec Bootstrap-vue/PrimeVue",
+        "Conception et réalisation de l’architecture du côté front-end du projet",
+        "Découpage en tâche du travail à réaliser dans GitHub",
+        "Support aux autres développeurs"
+      ]
+    },
+    {
+      "nom": "SOM",
+      "logo": "./som_logo.png",
+      "role": "Développeur fullstack",
+      "dateDebut": "05/2020",
+      "dateFin": "08/2021",
+      "responsabilites": [
+        "Conception de tableau de bord résultant des données récoltées au préalable",
+        "Corrections de bugs",
+        "Assurance qualité des tâches des autres développeurs"
+      ]
+    },
+    {
+      "nom": "Observatoire global du St-Laurent",
+      "logo": "./ogsl_logo.svg",
+      "role": "Développeur frontend",
+      "dateDebut": "10/2018",
+      "dateFin": "05/2020",
+      "responsabilites": [
+        "Personnalisation de sites Web avec la plateforme WordPress",
+        "Programmation de nouvelles fonctionnalités dans une application web",
+        "Participation à des comités décisionnels avec des membres de différentes organisations à travers le Canada",
+        "Conception d’interfaces avec le logiciel Adobe XD",
+        "Création de documentation d’API avec Swagger"
+      ]
+    },
+    {
+      "nom": "Hopem",
+      "logo": "./hopem_logo.webp",
+      "role": "Développeur logiciel",
+      "dateDebut": "10/2015",
+      "dateFin": "10/2018",
+      "responsabilites": [
+        "Compilation des versions de Primmo et déploiement de la version client",
+        "Support à la clientèle niveau 2",
+        "Programmation logiciel en Delphi"
+      ]
+    }
+
+]
