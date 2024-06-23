@@ -12,11 +12,14 @@
 .header-container__nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-basis: 40%;
 }
 
 /* -------------------- Content ------------------------ */
+section {
+  padding-bottom: 10px;
+}
 
 section > h1 {
   font-size: 6.45em;
@@ -25,24 +28,83 @@ section > h1 {
 
 .description-container {
   display: flex;
-  min-height: 200px;
+  /* max-height: 300px; */
+
 }
 
 .description-container > div {
   padding: 10px;
-  flex-basis: 50%;
   margin: 0;
-  background-color: gray;
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
-  border-radius: 0px 50px;
-  /* background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0,
-    linear-gradient(63deg, transparent 74%, #999 78%),
-    linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%),
-    #444;
-  background-size: 16px 48px; */
+  display: flex;
+  justify-content: end;
+  padding: 0;
+  flex-basis: 60%;
+}
+
+.logos-container > img {
+  width: 100px;
+}
+
+.description-container > div > img {
+  max-height: 300px;
 }
 
 .description-container > q {
   padding-left: 25px;
-  flex-basis: 50%;
+  flex-basis: 40%;
+}
+
+/* .section-profExperiences {
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+} */
+
+.section-profExperiences-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding-right: 2em;
+}
+
+.card-back-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content {
+  width: 300px;
+  height: 380px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  text-align: center;
+}
+
+.card-content:hover {
+  transform: rotateY(180deg);
+  color: white
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-content-front-logo {
+  width: 165px;
+}
+
+.card-content-back {
+  text-align: left;
+  transform: rotateY(180deg);
+}
+
+.card > h4 {
+  margin: 0;
 }
