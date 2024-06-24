@@ -1,21 +1,21 @@
 [
   {
     "nom": "Portail Alfred",
-    "captureEcran": "",
+    "captureEcran": "./dashboard.png",
     "compagnie": "Alfred technologies",
     "lien": "",
     "description": "Application de visualisation de données pour l'aide à la prise de décision à l'aide de graphiques et de tuiles. "
   },
   {
     "nom": "Inventaire",
-    "captureEcran": "",
+    "captureEcran": "./inventaire.png",
     "compagnie": "Alfred technologies",
     "lien": "",
     "description": "Application de gestion d'inventaire de vins et spiritueux qui se trouvent dans une cave à vin d'un restaurant. Trace l'historique des actions sur l'inventaire et permet de réquisitionner (déplacer) des bouteilles vers d'autres emplacements de stockage."
   },
   {
     "nom": "Menu",
-    "captureEcran": "",
+    "captureEcran": "./menu.png",
     "compagnie": "Alfred technologies",
     "lien": "",
     "description": "Migration technologique de l'application. Le stack avant était Vue2 (Nuxt) avec option API et vuex. J'ai travaillé à transformer le tout avec Vue3, sans Nuxt, composition API ainsi que Pinia et Typescript."
@@ -32,7 +32,7 @@
     "captureEcran": "",
     "compagnie": "Observatoire global du St-Laurent",
     "lien": "https://ogsl.ca/octo/?mapextent=-7347086.392356057,6621293.722740165,5",
-    "description": "Outil de visualisation de données développé avec Angular sur lequel il est possible d'ajouter des couches sur une carte pour aider à cette même visualisation. Durant le développement, plusieurs outils ont été utilisé comme Angular 8 à 12, RxJS et OpenLayers."
+    "description": "Outil de visualisation de données développé avec Angular sur lequel il est possible d'ajouter des couches sur une carte pour aider à cette même visualisation. Durant le développement, plusieurs outils ont été utilisés comme Angular 8 à 12, RxJS et OpenLayers."
   },
   {
     "nom": "Panier valérienois",
