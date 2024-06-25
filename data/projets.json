@@ -24,17 +24,9 @@
     "description": "Migration technologique de l'application. Le stack avant était Vue2 (Nuxt) avec option API et vuex. J'ai travaillé à transformer le tout avec Vue3, sans Nuxt, composition API ainsi que Pinia et Typescript."
   },
   {
-    "nom": "Instachat",
-    "stack": ["Vuejs", "Pinia", "Html", "Css", "Typescript"],
-    "captureEcran": "",
-    "compagnie": "Projet personnel",
-    "lien": "",
-    "description": "Projet collaboratif avec un spécialiste backend qui consistait à créer un dashboard par restaurant pour envoyer et recevoir des textos et pouvoir regarder l'historique des message. Pour ce faire, il fallait utiliser les websocket à travers la librarie Socket.io et Twilio. Utilisation de Vue3, Primevue, Pinia et Axios. Aucun lien disponible vu que le projet est malheureusement tombé à l'eau et n'est plus en ligne."
-  },
-  {
     "nom": "Octo",
     "stack": ["Angular", "RxJs", "OpenLayers", "Html", "Css", "Typescript"],
-    "captureEcran": "",
+    "captureEcran": "./octo.png",
     "compagnie": "Observatoire global du St-Laurent",
     "lien": "https://ogsl.ca/octo/?mapextent=-7347086.392356057,6621293.722740165,5",
     "description": "Outil de visualisation de données développé avec Angular sur lequel il est possible d'ajouter des couches sur une carte pour aider à cette même visualisation. Durant le développement, plusieurs outils ont été utilisés comme Angular 8 à 12, RxJS et OpenLayers."
@@ -42,9 +34,17 @@
   {
     "nom": "Panier valérienois",
     "stack": ["Vuejs", "Vuex", "Html", "Css", "Javascript"],
-    "captureEcran": "",
+    "captureEcran": "./panier.png",
     "compagnie": "Conception webmedia",
     "lien": "https://municipalite.saint-valerien.qc.ca/app/paniervalerinois/",
     "description": "Marché public sur une application web, permettant aux agriculteurs de mettre leurs produits sur le portail, mais aussi aux gens de les commander. Application dévelopée avec Vuejs, bootstrap-vue, vuex et axios."
+  },
+  {
+    "nom": "Instachat",
+    "stack": ["Vuejs", "Pinia", "Html", "Css", "Typescript"],
+    "captureEcran": "",
+    "compagnie": "Projet personnel",
+    "lien": "",
+    "description": "Projet collaboratif avec un spécialiste backend qui consistait à créer un dashboard par restaurant pour envoyer et recevoir des textos et pouvoir regarder l'historique des message. Pour ce faire, il fallait utiliser les websocket à travers la librarie Socket.io et Twilio. Utilisation de Vue3, Primevue, Pinia et Axios. Aucun lien disponible vu que le projet est malheureusement tombé à l'eau et n'est plus en ligne."
   }
 ]

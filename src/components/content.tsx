@@ -66,19 +66,26 @@ function Content() {
               <h4>
                 {project.nom} - {project.compagnie}
               </h4>
-              {/* {project.captureEcran === "" ? (
-                <a href={project.lien}>Voir l'application</a>
-              ) : (
+              {project.captureEcran !== "" ? (
                 <img
                   className="project-screenshot"
                   src={project.captureEcran}
                   alt={"capture d'écran du projet " + project.nom}
                 />
-              )} */}
-              {project.stack.map((tag: any) => (
-                <Tag label={tag} />
-              ))}
+              ) : (
+                ""
+              )}
+              <div>
+                {project.stack.map((tag: any) => (
+                  <Tag key={tag} label={tag} />
+                ))}
+              </div>
               <p>{project.description}</p>
+              {project.lien !== "" ? (
+                <a href={project.lien} target="_blank">Voir l'application</a>
+              ) : (
+                ""
+              )}
             </div>
           ))}
         </div>
