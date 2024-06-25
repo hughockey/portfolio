@@ -1,5 +1,6 @@
 import jobList from "../../data/data.json";
 import projectList from "../../data/projets.json";
+import Tag from "./tag";
 
 function Content() {
   return (
@@ -28,7 +29,7 @@ function Content() {
         </div>
       </section>
       <section className="section-profExperiences">
-        <h3>Expériences professionnelles</h3>
+        <h2>Expériences professionnelles</h2>
         <div className="section-profExperiences-container">
           {jobList.map((job: any) => (
             <div key={job.nom} className="card">
@@ -58,28 +59,29 @@ function Content() {
         </div>
       </section>
       <section>
-        <h3>Projets</h3>
-        {projectList.map((project: any) => (
-          <div key={project.nom}>
-            <h4>
-              {project.nom} - {project.compagnie}
-            </h4>
-            {project.captureEcran === "" ? (
-              <a href={project.lien}>Voir l'application</a>
-            ) : (
-              <img
-                height="350px"
-                src={project.captureEcran}
-                alt={"capture d'écran du projet " + project.nom}
-              />
-            )}
-            <p>{project.description}</p>
-          </div>
-        ))}
-
-        <h4></h4>
-
-        <p></p>
+        <h2>Projets</h2>
+        <div className="section-projects-container">
+          {projectList.map((project: any) => (
+            <div key={project.nom} className="project-container">
+              <h4>
+                {project.nom} - {project.compagnie}
+              </h4>
+              {/* {project.captureEcran === "" ? (
+                <a href={project.lien}>Voir l'application</a>
+              ) : (
+                <img
+                  className="project-screenshot"
+                  src={project.captureEcran}
+                  alt={"capture d'écran du projet " + project.nom}
+                />
+              )} */}
+              {project.stack.map((tag: any) => (
+                <Tag label={tag} />
+              ))}
+              <p>{project.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* <section>

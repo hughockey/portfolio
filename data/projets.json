@@ -1,6 +1,7 @@
 [
   {
     "nom": "Portail Alfred",
+    "stack": ["Vuejs", "TanstackQuery", "Html", "Tailwind", "Typescript" ],
     "captureEcran": "./dashboard.png",
     "compagnie": "Alfred technologies",
     "lien": "",
@@ -8,6 +9,7 @@
   },
   {
     "nom": "Inventaire",
+    "stack": ["Vuejs", "Nuxt", "Vuex", "Html", "Css", "Javascript"],
     "captureEcran": "./inventaire.png",
     "compagnie": "Alfred technologies",
     "lien": "",
@@ -15,6 +17,7 @@
   },
   {
     "nom": "Menu",
+    "stack": ["Vuejs", "Pinia", "Html", "Css", "Typescript"],
     "captureEcran": "./menu.png",
     "compagnie": "Alfred technologies",
     "lien": "",
@@ -22,6 +25,7 @@
   },
   {
     "nom": "Instachat",
+    "stack": ["Vuejs", "Pinia", "Html", "Css", "Typescript"],
     "captureEcran": "",
     "compagnie": "Projet personnel",
     "lien": "",
@@ -29,6 +33,7 @@
   },
   {
     "nom": "Octo",
+    "stack": ["Angular", "RxJs", "OpenLayers", "Html", "Css", "Typescript"],
     "captureEcran": "",
     "compagnie": "Observatoire global du St-Laurent",
     "lien": "https://ogsl.ca/octo/?mapextent=-7347086.392356057,6621293.722740165,5",
@@ -36,6 +41,7 @@
   },
   {
     "nom": "Panier valérienois",
+    "stack": ["Vuejs", "Vuex", "Html", "Css", "Javascript"],
     "captureEcran": "",
     "compagnie": "Conception webmedia",
     "lien": "https://municipalite.saint-valerien.qc.ca/app/paniervalerinois/",
