@@ -63,14 +63,63 @@ a > svg {
   padding-left: 45px;
 }
 
+.projects-section {
+  background-color: var(--secondary);
+  padding-top: 30px ;
+}
+.projects-section > h1 {
+  text-align: center;
+  color: var(--primary)
+}
+
+.contact-section {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section > h1 {
+  color: var(--secondary);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  max-width: 530px;
+  width: 100%;
+}
+
+.contact-form > input {
+  height: 30px;
+  margin-bottom: 12px;
+}
+
+.contact-form > textarea {
+  height: 130px;
+  margin-bottom: 12px;
+}
+
+.contact-form > button {
+  align-self: end;
+}
+
+input::placeholder, textarea::placeholder {
+  font-family: "Cutive Mono", monospace;
+  color: var(--placeholder);
+  padding-left: 5px;
+  font-size: 16px;
+}
+
 /* ------------------------ gauge -----------------------*/
-.gauge-container {
+.gauges-container {
   display: flex;
   flex-direction: column;
   margin-top: 25px;
 }
 
-.gauge-container > div {
+.gauges-container > div {
   background-color: var(--secondary);
   width: 90%;
   height: 30px;
@@ -91,6 +140,20 @@ a > svg {
   line-height: 30px;
   border-radius: 5px 0px 0px 5px;
   text-align: center;
+}
+
+/*-------------------------- tile----------------------*/
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.tile {
+  height: 300px;
+  width: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 

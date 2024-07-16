@@ -24,7 +24,7 @@ function Content() {
         </div>
         <div className="first-section-content-container-right">
           <img src="./avatar.png" alt="avatar de moi" />
-          <div className="gauge-container">
+          <div className="gauges-container">
             <div className="js-gauge">
               <div className="bar-filled">
                 <div className="tag">JavaScript</div>
@@ -56,6 +56,25 @@ function Content() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="projects-section">
+        <h1>Projets</h1>
+        <div className="tiles-container">
+          { projectList.map((project, index) => (
+            <div className="tile" key={index} style={{backgroundImage: `url(${project.captureEcran})`}}></div>
+          )) }
+        </div>
+      </section>
+
+      <section className="contact-section">
+        <h1>Prêt à collaborer?</h1>
+        <div className="contact-form">
+          <input placeholder="Nom" />
+          <input placeholder="Courriel" />
+          <textarea placeholder="Message" name="" id=""></textarea>
+          <button type="button">Soumettre</button>
         </div>
       </section>
     </>
