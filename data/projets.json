@@ -5,7 +5,7 @@
     "captureEcran": "./dashboard.png",
     "compagnie": "Alfred technologies",
     "lien": "",
-    "description": "Application de visualisation de données pour l'aide à la prise de décision à l'aide de graphiques et de tuiles. "
+    "description": "Application de visualisation de données pour la prise de décision à l'aide de graphiques et de tuiles. "
   },
   {
     "nom": "Inventaire",
@@ -13,7 +13,7 @@
     "captureEcran": "./inventaire.png",
     "compagnie": "Alfred technologies",
     "lien": "",
-    "description": "Application de gestion d'inventaire de vins et spiritueux qui se trouvent dans une cave à vin d'un restaurant. Trace l'historique des actions sur l'inventaire et permet de réquisitionner (déplacer) des bouteilles vers d'autres emplacements de stockage."
+    "description": "Application de gestion de cave à vins/spiritueux dans le domaine de la restauration."
   },
   {
     "nom": "Menu",
@@ -21,7 +21,7 @@
     "captureEcran": "./menu.png",
     "compagnie": "Alfred technologies",
     "lien": "",
-    "description": "Migration technologique de l'application. Le stack avant était Vue2 (Nuxt) avec option API et vuex. J'ai travaillé à transformer le tout avec Vue3, sans Nuxt, composition API ainsi que Pinia et Typescript."
+    "description": "Menu permettant de choisir et commander une bouteille de vin dans un restaurant."
   },
   {
     "nom": "Octo",
@@ -29,7 +29,7 @@
     "captureEcran": "./octo.png",
     "compagnie": "Observatoire global du St-Laurent",
     "lien": "https://ogsl.ca/octo/?mapextent=-7347086.392356057,6621293.722740165,5",
-    "description": "Outil de visualisation de données développé avec Angular sur lequel il est possible d'ajouter des couches sur une carte pour aider à cette même visualisation. Durant le développement, plusieurs outils ont été utilisés comme Angular 8 à 12, RxJS et OpenLayers."
+    "description": "Outil permettant d'aider les scientifique et la population à visualiser des données récoltées."
   },
   {
     "nom": "Panier valérienois",
@@ -37,7 +37,7 @@
     "captureEcran": "./panier.png",
     "compagnie": "Conception webmedia",
     "lien": "https://municipalite.saint-valerien.qc.ca/app/paniervalerinois/",
-    "description": "Marché public sur une application web, permettant aux agriculteurs de mettre leurs produits sur le portail, mais aussi aux gens de les commander. Application dévelopée avec Vuejs, bootstrap-vue, vuex et axios."
+    "description": "Application style marché public permettant la réservation de denrées locales entre producteurs et consommateurs."
   },
   {
     "nom": "Instachat",
@@ -45,6 +45,6 @@
     "captureEcran": "",
     "compagnie": "Projet personnel",
     "lien": "",
-    "description": "Projet collaboratif avec un spécialiste backend qui consistait à créer un dashboard par restaurant pour envoyer et recevoir des textos et pouvoir regarder l'historique des message. Pour ce faire, il fallait utiliser les websocket à travers la librarie Socket.io et Twilio. Utilisation de Vue3, Primevue, Pinia et Axios. Aucun lien disponible vu que le projet est malheureusement tombé à l'eau et n'est plus en ligne."
+    "description": "Tableau de bord pour des restaurants permettant la gestion des messages entrants et sortants à l'aide de sockets."
   }
 ]

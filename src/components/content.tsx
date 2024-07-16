@@ -5,95 +5,59 @@ import Tag from "./tag";
 function Content() {
   return (
     <>
-      <section>
-        <h1>Développeur frontend</h1>
-        <div className="description-container">
-          <div>
-            <div className="logos-container">
-              <img src="./javascript-logo.png" alt="javascript logo" />
-              <img src="./vue-logo.png" alt="vuejs logo" />
-              <img src="./angular-logo.png" alt="angular logo" />
-            </div>
-            <img src="./moi3.png" />
+      <section className="first-section-container">
+        <div className="first-section-content-container-left">
+          <div className="first-section-content__title">
+            <span>Développeur</span>
+            <span>Frontend</span>
           </div>
-          <q>
-            Je suis développeur web depuis maintenant 9 ans. Mon expertise est
-            répartie dans différentes technologies, mais surtout orientée
-            frontend. J'ai travaillé beaucoup avec évidemment HTML, SCSS,
-            Javascript et je continue d'améliorer mes connaissances en
-            Typescript à travers le framework Vuejs. Un peu d'Angular à travers
-            tout ça et maintenant, j'apprends les bases de React. <br /> <br />{" "}
-            Je prône la communication et je fais tout pour livrer des projets de
-            qualité dont je suis fier!
-          </q>
+          <p>
+            Salut! Moi c'est Hugo, enchanté. Ça fait 9 ans que je suis
+            développeur, 6 ans en tant que frontend. <br />
+            <br /> Je travailles en Javascript/Typescript, HTML et CSS/SCSS à
+            travers les frameworks Vuejs, Angular et je développe présentement
+            mes connaissances en React. <br />
+            <br /> Je suis naturellement curieux et je cherche toujours à
+            m'améliorer. Quand je ne code pas, vous me retrouverez probablement
+            au Crossfit ou en train de faire du vélo de montagne!
+          </p>
         </div>
-      </section>
-      <section className="section-profExperiences">
-        <h2>Expériences professionnelles</h2>
-        <div className="section-profExperiences-container">
-          {jobList.map((job: any) => (
-            <div key={job.nom} className="card">
-              <div className="card-content">
-                <div className="card-content-front frame">
-                  <img src={job.logo} className="card-content-front-logo" />
-                </div>
-                <div className="card-content-back frame">
-                  <div className="card-back-header">
-                    <span>{job.dateDebut}</span>
-                    <span>{job.dateFin}</span>
-                  </div>
-                  <h4>
-                    {job.nom} - {job.role}
-                  </h4>
-                  <div>
-                    <ul>
-                      {job.responsabilites.map((responsabilite: any) => (
-                        <li key={responsabilite}>{responsabilite}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+        <div className="first-section-content-container-right">
+          <img src="./avatar.png" alt="avatar de moi" />
+          <div className="gauge-container">
+            <div className="js-gauge">
+              <div className="bar-filled">
+                <div className="tag">JavaScript</div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-      <section>
-        <h2>Projets</h2>
-        <div className="section-projects-container">
-          {projectList.map((project: any) => (
-            <div key={project.nom} className="project-container">
-              <h4>
-                {project.nom} - {project.compagnie}
-              </h4>
-              {project.captureEcran !== "" ? (
-                <img
-                  className="project-screenshot"
-                  src={project.captureEcran}
-                  alt={"capture d'écran du projet " + project.nom}
-                />
-              ) : (
-                ""
-              )}
-              <div>
-                {project.stack.map((tag: any) => (
-                  <Tag key={tag} label={tag} />
-                ))}
+            <div className="ts-gauge">
+              <div className="bar-filled">
+                <div className="tag">TypeScript</div>
               </div>
-              <p>{project.description}</p>
-              {project.lien !== "" ? (
-                <a href={project.lien} target="_blank">Voir l'application</a>
-              ) : (
-                ""
-              )}
             </div>
-          ))}
+            <div className="vue-gauge">
+              <div className="bar-filled">
+                <div className="tag">Vue</div>
+              </div>
+            </div>
+            <div className="angular-gauge">
+              <div className="bar-filled">
+                <div className="tag">Angular</div>
+              </div>
+            </div>
+            <div className="css-gauge">
+              <div className="bar-filled">
+                <div className="tag">CSS</div>
+              </div>
+            </div>
+            <div className="html-gauge">
+              <div className="bar-filled">
+                <div className="tag">HTML</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* <section>
-        <h3>Contactez-moi</h3>
-      </section> */}
     </>
   );
 }
