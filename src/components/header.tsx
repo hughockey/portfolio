@@ -1,15 +1,16 @@
-
+import { BsLinkedin, BsGithub } from "react-icons/bs"
 function Header () {
   return (
     <header className="header-container">
-      <h5 className="header-container__title">Hugo Lemieux</h5>
+      <h4 className="header-container__logo">HL</h4>
       <nav className="header-container__nav">
-        {/* <a className="header-container__nav-link">Expertise</a>
-        <a className="header-container__nav-link">À propos</a> */}
-        <a className="header-container__nav-link">Contact</a>
-        <a className="header-container__nav-link">|</a>
-        <a>Réseaux sociaux</a>
+        <div className="header-container__nav__socials">
+          <a href="https://www.linkedin.com/in/hugo-lemieux/" target="_blank"><BsLinkedin /></a>
+          <a href="https://github.com/hughockey" target="_blank"><BsGithub /></a>
+        </div>
+        <button type="button" onClick={() => document.getElementById('contact')!.scrollIntoView()} className="header-container__nav__contact-button">Contactez-moi</button>
       </nav>
+      
     </header>
   )
 

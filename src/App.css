@@ -1,82 +1,175 @@
 /* -------------------- Header ------------------------ */
-.header-container {
+
+header {
   display: flex;
+  /* width: 100vw; */
   justify-content: space-between;
 }
 
-.header-container__title {
-  color: white;
-  text-transform: uppercase;
-}
-
-.header-container__nav {
+nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-basis: 40%;
+}
+
+nav > div > a {
+  padding: 0px 10px;
+}
+
+a > svg {
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.header-container__nav__socials {
+  padding-right: 18px;
 }
 
 /* -------------------- Content ------------------------ */
-section {
-  padding-bottom: 10px;
+.first-section-container {
+  display: flex;
+  padding-bottom: 60px;
 }
 
-section > h1 {
-  font-size: 6.45em;
+.first-section-content-container-left {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+}
+
+.first-section-content-container-left > .first-section-content__title > span {
+  font-size: 76px;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
-.description-container {
+.first-section-content-container-left
+  > .first-section-content__title
+  > span:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.first-section-content__title {
   display: flex;
-  /* max-height: 300px; */
-
+  flex-direction: column;
+  max-width: 850px;
 }
 
-.description-container > div {
-  padding: 10px;
-  margin: 0;
+.first-section-content-container-left > p {
+  font-family: "Cutive Mono", monospace;
+  font-size: 18px;
+}
+
+.first-section-content-container-right {
+  flex-basis: 50%;
+  padding-left: 45px;
+}
+
+.projects-section {
+  background-color: var(--secondary);
+  padding: 30px 0px 60px 0px;
+}
+.projects-section > h1 {
+  text-align: center;
+  color: var(--primary)
+}
+
+.contact-section {
+  padding-top: 30px;
   display: flex;
-  justify-content: end;
-  padding: 0;
-  flex-basis: 60%;
+  flex-direction: column;
+  align-items: center;
 }
 
-.logos-container > img {
-  width: 100px;
+.contact-section > h1 {
+  color: var(--secondary);
 }
 
-.description-container > div > img {
-  max-height: 300px;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  max-width: 530px;
+  width: 100%;
 }
 
-.description-container > q {
-  padding-left: 25px;
-  flex-basis: 40%;
+.contact-form > input {
+  height: 30px;
+  margin-bottom: 12px;
 }
 
-/* .section-profExperiences {
-  max-height: 300px;
-  overflow-y: scroll;
-  overflow-x: scroll;
-} */
+.contact-form > textarea {
+  height: 130px;
+  margin-bottom: 12px;
+}
 
-.section-profExperiences-container {
+.contact-form > button {
+  align-self: end;
+}
+
+input::placeholder, textarea::placeholder {
+  font-family: "Cutive Mono", monospace;
+  color: var(--placeholder);
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+/* ------------------------ Footer -----------------------*/
+.copyrights {
+  text-align: center;
+  font-family: "Cutive Mono", monospace;
+  font-size: 13px;
+  /* font-size: ;  */
+}
+
+/* ------------------------ gauge -----------------------*/
+.gauges-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.gauges-container > div {
+  background-color: var(--secondary);
+  width: 90%;
+  height: 30px;
+  margin: 0px 0 20px 0;
+  border-radius: 7px 5px 5px 7px;
+}
+
+.bar-filled {
+  background-color: var(--blue);
+  width: 90%;
+  height: 30px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.tag {
+  background-color: var(--dark-blue);
+  width: 130px;
+  line-height: 30px;
+  border-radius: 5px 0px 0px 5px; /* to keep away trailing colors of parent's border-radius, child one should be wider than the parent */
+  text-align: center;
+}
+
+.badges-container {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+}
+
+/*-------------------------- card ----------------------*/
+
+.cards-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
-
-.card {
-  padding-right: 2em;
-}
-
-.card-back-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .card-content {
-  width: 300px;
-  height: 380px;
+  width: 400px;
+  height: 200px;
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -84,9 +177,10 @@ section > h1 {
   text-align: center;
 }
 
+
 .card-content:hover {
   transform: rotateY(180deg);
-  color: white
+  color: var(--primary)
 }
 
 .frame {
@@ -96,15 +190,18 @@ section > h1 {
   backface-visibility: hidden;
 }
 
-.card-content-front-logo {
-  width: 165px;
+.card-content-front-screenshot {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+/* Need only the last background image to be centered */
+.card:last-child > .card-content > .card-content-front > .card-content-front-screenshot {
+  background-position: center;
+}
 .card-content-back {
   text-align: left;
   transform: rotateY(180deg);
-}
-
-.card > h4 {
-  margin: 0;
 }
