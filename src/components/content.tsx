@@ -1,21 +1,33 @@
 // import jobList from "../../data/data.json";
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 import projectList from "../../data/projets.json";
 import Tag from "./tag";
+// import Toast, { ToastType } from "./toast";
 import emailjs from "@emailjs/browser";
 
 function Content() {
-  const form = useRef<HTMLFormElement>()
+  const form = useRef<HTMLFormElement>(null);
+  // const toastType = useRef<ToastType>('neutral')
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent) => {
     e.preventDefault();
     if (form.current) {
-      emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
-        { publicKey: "IkSzDXZJMuTliphig" }
-      );
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          form.current,
+          { publicKey: "IkSzDXZJMuTliphig" }
+        )
+        .then(
+          () => {
+            // toastType.current = 'success'
+            form.current?.reset();
+          },
+          () => {
+            // toastType.current = 'error'
+          }
+        );
     }
   };
   return (
@@ -104,17 +116,12 @@ function Content() {
         <h1>Prêt à collaborer?</h1>
         <form ref={form} onSubmit={sendEmail} className="contact-form">
           <input placeholder="Nom" name="contact_name" />
-          <input
-            placeholder="Courriel"
-            name="contact_email"
-          />
-          <textarea
-            placeholder="Message"
-            name="message"
-          ></textarea>
+          <input placeholder="Courriel" name="contact_email" />
+          <textarea placeholder="Message" name="message"></textarea>
           <button type="submit">Soumettre</button>
         </form>
       </section>
+      {/* <Toast message="C'est un test" type={toastType.current} /> */}
     </>
   );
 }
