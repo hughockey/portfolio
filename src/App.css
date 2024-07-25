@@ -27,6 +27,7 @@ a > svg {
 /* -------------------- Content ------------------------ */
 .first-section-container {
   display: flex;
+  padding-bottom: 60px;
 }
 
 .first-section-content-container-left {
@@ -65,7 +66,7 @@ a > svg {
 
 .projects-section {
   background-color: var(--secondary);
-  padding-top: 30px ;
+  padding: 30px 0px 60px 0px;
 }
 .projects-section > h1 {
   text-align: center;
@@ -112,6 +113,14 @@ input::placeholder, textarea::placeholder {
   font-size: 16px;
 }
 
+/* ------------------------ Footer -----------------------*/
+.copyrights {
+  text-align: center;
+  font-family: "Cutive Mono", monospace;
+  font-size: 13px;
+  /* font-size: ;  */
+}
+
 /* ------------------------ gauge -----------------------*/
 .gauges-container {
   display: flex;
@@ -138,22 +147,61 @@ input::placeholder, textarea::placeholder {
   background-color: var(--dark-blue);
   width: 130px;
   line-height: 30px;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px; /* to keep away trailing colors of parent's border-radius, child one should be wider than the parent */
   text-align: center;
 }
 
-/*-------------------------- tile----------------------*/
-.tiles-container {
+.badges-container {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+}
+
+/*-------------------------- card ----------------------*/
+
+.cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
 }
-.tile {
-  height: 300px;
-  width: 450px;
+.card-content {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  text-align: center;
+}
+
+
+.card-content:hover {
+  transform: rotateY(180deg);
+  color: var(--primary)
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-content-front-screenshot {
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
+/* Need only the last background image to be centered */
+.card:last-child > .card-content > .card-content-front > .card-content-front-screenshot {
+  background-position: center;
+}
+.card-content-back {
+  text-align: left;
+  transform: rotateY(180deg);
+}

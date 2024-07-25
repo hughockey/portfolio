@@ -42,9 +42,9 @@
   {
     "nom": "Instachat",
     "stack": ["Vuejs", "Pinia", "Html", "Css", "Typescript"],
-    "captureEcran": "",
+    "captureEcran": "./no-image.jpg",
     "compagnie": "Projet personnel",
     "lien": "",
-    "description": "Tableau de bord pour des restaurants permettant la gestion des messages entrants et sortants à l'aide de sockets."
+    "description": "Application prototype étant un tableau de bord pour des restaurants permettant la gestion des messages entrants et sortants à l'aide de sockets."
   }
 ]

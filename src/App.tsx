@@ -3,6 +3,7 @@
 import "./App.css";
 import Content from "./components/content";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header></Header>
       <Content></Content>
+      <Footer></Footer>
       <div></div>
     </>
   );

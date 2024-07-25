@@ -1,8 +1,23 @@
-import jobList from "../../data/data.json";
+// import jobList from "../../data/data.json";
+import { useRef } from "react";
 import projectList from "../../data/projets.json";
 import Tag from "./tag";
+import emailjs from "@emailjs/browser";
 
 function Content() {
+  const form = useRef<HTMLFormElement>()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (form.current) {
+      emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        { publicKey: "IkSzDXZJMuTliphig" }
+      );
+    }
+  };
   return (
     <>
       <section className="first-section-container">
@@ -61,21 +76,44 @@ function Content() {
 
       <section className="projects-section">
         <h1>Projets</h1>
-        <div className="tiles-container">
-          { projectList.map((project, index) => (
-            <div className="tile" key={index} style={{backgroundImage: `url(${project.captureEcran})`}}></div>
-          )) }
+        <div className="cards-container">
+          {projectList.map((project, index) => (
+            <div className="card" key={index}>
+              <div className="card-content">
+                <div className="card-content-front frame">
+                  <div
+                    style={{ backgroundImage: `url(${project.captureEcran})` }}
+                    className="card-content-front-screenshot"
+                  ></div>
+                </div>
+                <div className="card-content-back frame">
+                  <p>{project.description}</p>
+                  <div className="badges-container">
+                    {project.stack.map((tag, index) => (
+                      <Tag label={tag} key={index} className="badge" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="contact-section">
+      <section id="contact" className="contact-section">
         <h1>Prêt à collaborer?</h1>
-        <div className="contact-form">
-          <input placeholder="Nom" />
-          <input placeholder="Courriel" />
-          <textarea placeholder="Message" name="" id=""></textarea>
-          <button type="button">Soumettre</button>
-        </div>
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <input placeholder="Nom" name="contact_name" />
+          <input
+            placeholder="Courriel"
+            name="contact_email"
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <button type="submit">Soumettre</button>
+        </form>
       </section>
     </>
   );

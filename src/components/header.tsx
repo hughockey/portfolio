@@ -8,7 +8,7 @@ function Header () {
           <a href="https://www.linkedin.com/in/hugo-lemieux/" target="_blank"><BsLinkedin /></a>
           <a href="https://github.com/hughockey" target="_blank"><BsGithub /></a>
         </div>
-        <button type="button" className="header-container__nav__contact-button">Contactez-moi</button>
+        <button type="button" onClick={() => document.getElementById('contact')!.scrollIntoView()} className="header-container__nav__contact-button">Contactez-moi</button>
       </nav>
       
     </header>
